@@ -29,22 +29,23 @@ This will launch a browser with your application running on a local development 
 It would open a swagger page with two operations GET and Post
 Test the post endpoint with data.. 
 Sample data
-
+```json
 {
   "policyTerm": 2,
   "coverageAmount": 50000000
 }
-
+```
 Sample Response: 201 
+```json
 {
   "quoteId": "6dd1dbae-e97c-40a4-b70e-5d0fffc4fe6c"
 }
- 
+ ```
 
-Copy the quoteId from response and use it as input parameter in get endpoint
+## Copy the quoteId from response and use it as input parameter in get endpoint
 
 Sample Response 
-
+```json
 {
   "quoteId": "6dd1dbae-e97c-40a4-b70e-5d0fffc4fe6c",
   "policyTerm": 2,
@@ -68,5 +69,6 @@ Sample Response
     }
   ]
 }
+```
 
 
