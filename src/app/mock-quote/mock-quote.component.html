@@ -1,0 +1,54 @@
+<!-- Add / Edit Form -->
+
+<div>
+  <p> Submit a quote</p>
+
+  <input [(ngModel)] ="policyTerm" /><br />
+  <input [(ngModel)] = "coverageAmount" placeholder="Enter coverage ammount" /><br /><br />
+  <button (click)="addMockQuote(policyTerm, coverageAmount)">Submit Quote</button><br /><br/>
+  {{result}}
+
+</div>
+
+
+
+<br />
+<div>
+  <p> Retreive a quote</p>
+  <input #quoteId placeholder="Enter a quoteId" />
+  <button (click)="getMockQuote(quoteId.value)">Retrieve Quote</button>
+</div>
+
+<div *ngIf="dataLoaded">
+  <h2> Quote Details</h2>
+  <table border="1" cellpadding="5">
+    <tr>
+      <th>QuoteId</th>
+      <th>policy Term</th>
+      <th>Coverage Amount</th>
+    </tr>
+    <tr>
+      <td>{{MockQuote.quoteId}}</td>
+      <td>{{MockQuote.policyTerm}}</td>
+      <td>{{MockQuote.coverageAmount}}</td>
+    </tr>
+    <tr>
+  </table>
+  <br />
+  <table border="1" cellpadding="5">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>CompanyCode</th>
+        <th>Premium</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let mockPremium of MockQuote.premiums; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ mockPremium.companyCode }}</td>
+        <td>{{ mockPremium.premium }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
