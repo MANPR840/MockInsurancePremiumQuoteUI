@@ -9,7 +9,7 @@ npm --version
 
 npm install -g @angular/cli
 
-##
+## Clone Repo
 Open a terminal or command prompt. Navigate to the directory where you want to clone the repository: cd /path/to/your/directory Clone the repository using the GitLab URL: 
 git clone https://github.com/MANPR840/MockInsurancePremiumQuoteUI.git
 
@@ -37,6 +37,7 @@ Click on submit Quote
 
 
 Copy the quote Id 81ad0156-aa02-4f96-a59a-d24e2b075f09 and use it as input to retrieve quote. Click on Retrieve quote. It should show quote details
+
 
 
 
