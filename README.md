@@ -1,74 +1,43 @@
-# Mock Insurance Premium Quote API
+# Mock Insurance Premium Quote UI
+
+## Install Node.js and npm: Ensure you have Node.js and npm installed. Check versions with:
+
+node --version
+npm --version
+
+## Install Angular CLI: Install Angular CLI globally using npm:
+
+npm install -g @angular/cli
+
+##
+Open a terminal or command prompt. Navigate to the directory where you want to clone the repository: cd /path/to/your/directory Clone the repository using the GitLab URL: 
+git clone https://github.com/MANPR840/MockInsurancePremiumQuoteUI.git
 
 
-# Step 1: Clone the Repository
-
-Using Git Command Line: Open a terminal or command prompt. Navigate to the directory where you want to clone the repository: cd /path/to/your/directory Clone the repository using the GitLab URL: 
-git clone https://github.com/MANPR840/MockPremiumQuoteApi.git 
-
-Using Visual Studio: Open Visual Studio. Go to the Git menu and select Clone Repository. Enter the GitLab repository URL in the "Repository Location" field. Choose a local folder for the clone and click Clone.
-
-# Step 2: Open the Project in Visual Studio
-
-After cloning, open Visual Studio and navigate to the cloned folder.
-
-Open the .sln (solution) file to load the project
+# Navigate to directory MockInsurancePremiumQuoteUI in terminal
 
 
-# Step 3: Build the Project
+npm install
+npm start
 
-In Visual Studio, press Ctrl + Shift + B or go to Build > Build Solution.
+On successful start , it would show a url 'http://localhost:61385/'
+open this url in a browser
 
-Ensure there are no build errors.
+## Make sure Mock API is up and running in another instance of visual studio 
 
-# Step 4: Run as HTTP Server
 
-Press Ctrl+F5 (Run without debugging). or click on http in Menu
-This will launch a browser with your application running on a local development server. [http://localhost:5136/swagger/index.html]
+Submit a quote on UI 
+Example policyTerm = 2
 
-It would open a swagger page with two operations GET and Post
-Test the post endpoint with data.. 
-Sample data
-```json
-{
-  "policyTerm": 2,
-  "coverageAmount": 50000000
-}
-```
-Sample Response: 201 
-```json
-{
-  "quoteId": "6dd1dbae-e97c-40a4-b70e-5d0fffc4fe6c"
-}
- ```
+coverageAmount = 400000
 
-## Copy the quoteId from response and use it as input parameter in get endpoint
+Click on submit Quote
 
-Sample Response 
-```json
-{
-  "quoteId": "6dd1dbae-e97c-40a4-b70e-5d0fffc4fe6c",
-  "policyTerm": 2,
-  "coverageAmount": 50000000,
-  "premiums": [
-    {
-      "companyCode": "ABC001",
-      "premium": 1250000
-    },
-    {
-      "companyCode": "STQ002",
-      "premium": 750000
-    },
-    {
-      "companyCode": "QRJ003",
-      "premium": 250000
-    },
-    {
-      "companyCode": "JKL004",
-      "premium": 100000
-    }
-  ]
-}
-```
+{"quoteId":"81ad0156-aa02-4f96-a59a-d24e2b075f09"} created successfully.
+
+
+Copy the quote Id 81ad0156-aa02-4f96-a59a-d24e2b075f09 and use it as input to retrieve quote. Click on Retrieve quote. It should show quote details
+
+
 
 
